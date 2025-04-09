@@ -1,0 +1,104 @@
+body {
+    background-color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+.background {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #9d9d9d;
+    opacity: 1;
+    background-image: radial-gradient(circle at center center, #000000, #9d9d9d), repeating-radial-gradient(circle at center center, #000000, #000000, 40px, transparent 80px, transparent 40px);
+    background-blend-mode: multiply;
+}
+
+.title {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+    padding: 0;
+    background-color: #2d2d2d;
+    backdrop-filter: blur(2px);
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    margin-bottom: 400px;
+    background-color: #5e5e5e;
+    border-radius: 12px;
+    height: 10%;
+    min-height: 70px;
+    width: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px #9d9d9d;
+}
+
+form {
+    height: 46px;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    font-size: 18px;
+    outline: none;
+    border: solid #a9a9a984 1px;
+    padding: 0;
+}
+
+.input {
+    width: 50%;
+    border-radius: 5px 0 0 5px;
+    padding: 0 3px;
+}
+
+.button {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    background-color: white;
+    text-align: center;
+    padding: 0 30px;
+}
+
+footer * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    height: 10%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
