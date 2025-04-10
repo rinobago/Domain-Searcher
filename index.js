@@ -19,10 +19,16 @@ app.post("/searched", async (req, res) => {
             },
         });
         console.log(result.data);
-        res.render("index.ejs");
+        res.render("index.ejs", {
+            data: result.data,
+            search: req.body.search,
+        });
     } catch (error) {
         console.log(error.response.data);
-        res.render("index.ejs");
+        res.render("index.ejs", {
+            data: error.response.data,
+            search: req.body.search,
+        });
     }
 });
 

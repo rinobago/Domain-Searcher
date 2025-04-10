@@ -11,9 +11,37 @@
             <div class="title"><h1>Domain Searcher</h1></div>
             <div class="main">
                 <form action="/searched" method="post">
-                    <input class="input" type="search" name="search" />
+                    <input class="input" type="search" name="search" value="<%= locals.data ? search: '' %>" />
                     <input class="button" type="submit" value="SEARCH" />
                 </form>
+                <% if (locals.data && Array.isArray(data.domains)) { %>
+                <div class="results">
+                    <h2>Results:</h2>
+                    <div class="domainNames">
+                        <ul>
+                            <% for (let i = 0; i < data.domains.length; i++) { %>
+                            <li><%= data.domains[i].domain %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <% } else if (locals.data && data.message) { %>
+                <div class="results">
+                    <h2>Results:</h2>
+                    <div class="domainNames">
+                        <p>No results found.</p>
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <% } %>
+                <!-- <div class="results">
+                    <h2>Results:</h2>
+                    <div class="domainNames">
+                        <p>No results found.</p>
+                    </div>
+                    <div class="space"></div>
+                </div> -->
             </div>
             <footer>
                 <div class="contact-links">
